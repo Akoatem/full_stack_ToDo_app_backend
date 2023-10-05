@@ -16,10 +16,6 @@ const PORT = process.env.port || 5000
 app.use(express.json())
 app.use(cors())
 
-// for deployment
-app.use('*', function(req, res){
-    res.sendFile(path.join(__dirname, './todo/build/index.html'))
-})
 
 app.use(routes)
 
